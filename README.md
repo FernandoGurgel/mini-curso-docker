@@ -62,11 +62,19 @@ $ npm init -y
 $ npm i express
 ```
 
-
 Iniciar container
 
 ```shell
 $ docker start -i appA 
 ```
+
+Criar rede load balance
+```shell
+$ docker pull nginx
+$ docker run --name load -v $(pwd)/config/nginx.conf:/etc/nginx/nginx.conf -p80:80 -d nginx 
+```
+
+
+
 
 
